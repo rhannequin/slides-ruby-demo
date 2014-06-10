@@ -26,7 +26,7 @@
 
         <section>
           <h1>Ruby</h1>
-          <img src="img/ruby.png" style="border: none; box-shadow: none" />
+          <img src="img/ruby.png" style="border: none; box-shadow: none">
           <h3>A Programmer's Best Friend</h3>
           <p>
             <small>#WebDayESGI 2014 - <a href="http://twitter.com/rhannequin">@rhannequin</a></small>
@@ -84,7 +84,7 @@
             <p>Designé pour la productivité et le fun</p><br />
             <p>Orienté développeur plutôt que machine</p><br />
             <p>C'est le développeur qui écrit le code, c'est lui le maître</p>
-            <img src="img/me-gusta.jpg" style="border:none;box-shadow:none" />
+            <img src="img/me-gusta.jpg" style="border:none;box-shadow:none">
           </section>
           <section>
             <h2>Implémentation</h2>
@@ -101,7 +101,14 @@
         </section>
 
         <section>
+          <h2>Quand j'entends "Ruby c'est fini"</h2>
+          <img src="img/michael-scott.gif" style="border:none;box-shadow:none" height="300">
+        </section>
+
+        <section>
           <h1>Syntaxe</h1>
+          <br>
+          <img src="img/christian-bale.gif" style="border:none;box-shadow:none" height="300">
         </section>
 
 
@@ -335,7 +342,9 @@
 
         <section>
           <section>
-            <h2>Blocks</h2>
+            <h1>Blocks</h1>
+          </section>
+          <section>
             <pre>
               <code>
                 %w(Bulbizarre Salamèche Carapuce).each do |pokemon|
@@ -355,74 +364,50 @@
               </code>
             </pre>
           </section>
-          <section>
-            <h2>Classes, modules et mixins</h2>
-            <pre>
-              <code>
-                class Human
-                  attr_accessor :name
-                  def initialize(name)
-                    @name = name
-                  end
-                end
+        </section>
 
-                class Dev < Human
-                  attr_accessor :skills
-                  def initialize(name, skills)
-                    super(name)
-                    @skills = skills
-                  end
-                end
-              </code>
-              <code>
-                > r = Dev.new "rhannequin", ["backend", "noob"]
-                > print "My name is #{r.name} "
-                > print "and my skills are #{r.skills.join(', ')}."
-                #=> My name is rhannequin and my skills are backend, noob.
-              </code>
-            </pre>
-          </section>
-          <section>
-            <h2>Les petits plus</h2>
-            <pre>
-              <code>
-                > is_allowed?
-                #=> true
-              </code>
-              <code>
-                > (1..9).to_a
-                #=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
-                > [1...10].to_a
-                #=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
-              </code>
-              <code>
-                > 5.times {print "lol "}
-                #=> lol lol lol lol lol
-              </code>
-            </pre>
-          </section>
-          <section>
-            <h2>Un petit dernier pour la route</h2>
-            <pre>
-              <code>
-                def some_method(a, b, c=5, *p, q)
-                end
 
-                some_method(25, 35, 45)
-                  a=25   b=35  c=5
-                  p=[]   q=45
-                some_method(25, 35, 45, 55)
-                  a=25   b=35  c=45
-                  p=[]   q=55
-                some_method(25, 35, 45, 55, 65)
-                  a=25   b=35  c=45
-                  p=[55] q=65
-                some_method(25, 35, 45, 55, 65, 75)
-                  a=25,  b=35  c=45
-                  p=[55, 65]    q=75
-              </code>
-            </pre>
-          </section>
+        <section>
+          <h2>Les petits plus</h2>
+          <pre>
+            <code>
+              > is_allowed?
+              #=> true
+            </code>
+            <code>
+              > (1..9).to_a
+              #=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
+              > [1...10].to_a
+              #=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            </code>
+            <code>
+              > 5.times {print "lol "}
+              #=> lol lol lol lol lol
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Un petit dernier pour la route</h2>
+          <pre>
+            <code>
+              def some_method(a, b, c=5, *p, q)
+              end
+
+              some_method(25, 35, 45)
+                a=25   b=35  c=5
+                p=[]   q=45
+              some_method(25, 35, 45, 55)
+                a=25   b=35  c=45
+                p=[]   q=55
+              some_method(25, 35, 45, 55, 65)
+                a=25   b=35  c=45
+                p=[55] q=65
+              some_method(25, 35, 45, 55, 65, 75)
+                a=25,  b=35  c=45
+                p=[55, 65]    q=75
+            </code>
+          </pre>
         </section>
 
         <section>
@@ -430,27 +415,87 @@
         </section>
 
         <section>
-          <section>
-            <h1>Évolution</h1>
-          </section>
-          <section>
-            <ul>
-              <li>Ruby : [...]</li>
-              <li>RubyOnRails : [...]</li>
-              <li>Sinatra : [...]</li>
-            </ul>
-          </section>
+          <h2>Plate-formes</h2>
+          <p>
+            <img src="img/linux-logo.png" alt="" height="300" style="border: none; box-shadow: none; padding: 0 20px">
+            <img src="img/apple-logo.jpg" alt="" height="300" style="border: none; box-shadow: none; padding: 0 20px">
+            <img src="img/windows-logo.png" alt="" height="300" style="border: none; box-shadow: none; padding: 0 20px">
+          </p>
+        </section>
+
+        <section>
+          <h2>Implémentations</h2>
+          <ul>
+            <li>MRI : Matz Ruby Implementation</li>
+            <li>Rubunis : Ruby in Ruby</li>
+            <li>JRuby : Ruby for the JVM</li>
+            <li>MacRuby : Ruby for Mac</li>
+            <li>IronRuby : Ruby in .NET Framework</li>
+          </ul>
         </section>
 
         <section>
           <h2>Actuellement en production</h2>
           <ul>
             <li>Github</li>
+            <li>Airbnb</li>
+            <li>Twitter</li>
+            <li>Shopify</li>
+            <li>Hulu</li>
+            <li>Groupon</li>
+            <li>SoundCloud</li>
+            <li>Yellow Pages</li>
+            <li>Basecamp</li>
+            <li>Nasa</li>
           </ul>
         </section>
 
         <section>
+          <section>
+            <h1>Évolution</h1>
+          </section>
+          <section>
+            <h2>Ruby</h2>
+            <p>520 commits sur le seul mois de mai 2014</p>
+            <br>
+            <ul>
+              <li>1.8 : 08/2003</li>
+              <li>1.9 : 12/2007</li>
+              <li>1.9.3 : 10/2011</li>
+              <li>2.0 : 02/2013</li>
+              <li>2.1 : 12/2014</li>
+            </ul>
+            <br><br>
+            <p>Évolution toujours très active, GC de plus en plus efficace</p>
+          </section>
+          <section>
+            <h2>Gems</h2>
+            <ul>
+              <li>76 832 gems depuis 2009, en perte de vitesse</li>
+              <li>3 201 954 550 downloads</li>
+            </ul>
+            <br><br>
+            <p>NPM : 77 701 modules, en progression constante</p>
+          </section>
+          <section>
+            <h2>Frameworks</h2>
+            <p>Rails très actif</p>
+            <p>1339 commits et 329 merged pull-requests en mai 2014</p>
+            <p>Version 3 en août 2010, version 4 en juin 2013</p>
+            <p>Aujourd'hui 4.1.1</p>
+            <br>
+            <p>Sinatra : évolution lente, micro-framework mature</p>
+          </section>
+        </section>
+
+        <section>
+          <h1>Conclusion</h1>
+        </section>
+
+        <section>
           <h1>THE END</h1>
+          <h3>Merci</h3>
+          <h2>Des questions ?</h2>
           <h3>#WebDayESGI 2014</h3>
           <p>By @rhannequin - <a href="https://github.com/rhannequin">Github</a> <a href="http://twitter.com/rhannequin">Twitter</a></p>
         </section>
