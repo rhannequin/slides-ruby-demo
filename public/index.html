@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Getting started with Ruby</title>
+    <title>Ruby is not dead (yet)</title>
     <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
     <meta name="author" content="Hakim El Hattab">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -34,18 +34,30 @@
         </section>
 
         <section>
-          <h2>À propos</h2>
-          <h3>Rémy Hannequin</h3>
-          <ul>
-            <li>Développeur Web Ruby / JavaScript</li>
-            <li>RATP &amp; ESGI 5A EB</li>
-            <li><a href="https://github.com/webdevesgi">Laboratoire Web</a> ESGI</li>
-          </ul>
-          <p>&nbsp;</p>
-          <p>
-            <a href="https://twitter.com/rhannequin">Twitter</a> &amp;
-            <a href="https://github.com/rhannequin">Github</a> : @rhannequin
-          </p>
+          <section>
+            <h2>À propos</h2>
+            <h3>Rémy Hannequin</h3>
+            <ul>
+              <li>Développeur Web Ruby / JavaScript</li>
+              <li>RATP &amp; ESGI 5A EB</li>
+              <li><a href="https://github.com/webdevesgi">Laboratoire Web</a> ESGI</li>
+            </ul>
+            <p>&nbsp;</p>
+            <p>
+              <a href="https://twitter.com/rhannequin">Twitter</a> &amp;
+              <a href="https://github.com/rhannequin">Github</a> : @rhannequin
+            </p>
+          </section>
+          <section>
+            <h2>J'aime...</h2>
+            <p>Le beau code</p>
+            <p>L'astronomie</p>
+            <p>Le handball</p>
+            <p>Les pokemons</p>
+            <p>
+              <img src="img/pikachu.gif" alt="">
+            </p>
+          </section>
         </section>
 
         <section>
@@ -133,24 +145,27 @@
           </section>
           <section>
             <h2>Syntaxe <em>user-friendly</em></h2>
-            <pre>
-              <code>
+            <pre style="margin: 0 auto;">
+              <code style="padding: 0">
                 def is_ok?
                   true
                 end
-
                 is_ok? # => true
               </code>
             </pre>
-            <pre>
-              <code>
+            <pre style="margin: 0 auto;">
+              <code style="padding: 0">
                 str = "hello"
-
                 str.capitalize  # => "Hello"
                 str             # => "hello"
-
                 str.capitalize! # => "Hello"
                 str             # => "Hello"
+              </code>
+            </pre>
+            <pre style="margin: 0 auto;">
+              <code style="padding: 0">
+                %w(Paris Glasgow Singapore)
+                # => ["Paris", "Glasgow", "Singapore"]
               </code>
             </pre>
           </section>
@@ -164,16 +179,37 @@
               </code>
             </pre>
           </section>
+          <section>
+            <h2>Utilisable pour les sciences</h2>
+            <pre>
+              <code>
+                2**2048
+                # => 323170060713110073007148766886699519604441026697
+                15484032130345427524655138867890893197201411522913463
+                68871796092189801949411955915049092109508815238644828
+                31206308773673009960917501977503896521067960576383840
+                67568276792218642619756161838094338476170470581645852
+                03630504288757589154106580860755239912393038552191433
+                33896683424206849747865645694948561760353263220580778
+                05659331026192708460314150258592864177116725943603718
+                46185735759835115230164590440369761323328723122712568
+                47108202097251571017269313234696785425806566979350459
+                97268352998638215525166389437335543602135433229604645
+                318478604952148193555853611059596230656
+              </code>
+            </pre>
+            <p>Pas très utile : 10**80 > nombre total de particules dans l'univers</p>
+          </section>
         </section>
 
 
-        <!-- Conditions -->
+        <!-- Bases -->
         <section>
           <section>
-            <h1>Conditions</h1>
+            <h1>Les bases</h1>
           </section>
           <section>
-            <h2>Condition classique</h2>
+            <h2>Conditions</h2>
             <pre>
               <code>
                 if ruby > php
@@ -183,33 +219,19 @@
                 end
               </code>
             </pre>
-          </section>
-          <section>
-            <h2>Condition <em>in-line</em></h2>
             <pre>
               <code>
                 if true then print "ok"
               </code>
             </pre>
-          </section>
-          <section>
-            <h2>Condition inverse</h2>
             <pre>
               <code>
                 do_it unless able_to
               </code>
             </pre>
           </section>
-        </section>
-
-
-        <!-- Boucles -->
-        <section>
           <section>
-            <h1>Boucles</h1>
-          </section>
-          <section>
-            <h2>for...in</h2>
+            <h2>Boucles</h2>
             <pre>
               <code>
                 for cat in cats
@@ -217,9 +239,6 @@
                 end
               </code>
             </pre>
-          </section>
-          <section>
-            <h2>While</h2>
             <pre>
               <code>
                 while is_night
@@ -227,9 +246,6 @@
                 end
               </code>
             </pre>
-          </section>
-          <section>
-            <h2>Inversée &amp; <em>in-line</em></h2>
             <pre>
               <code>
                 work until tired
@@ -345,12 +361,11 @@
             <h1>Blocks</h1>
           </section>
           <section>
+            <h2>Qu'est-ce que c'est ?</h2>
+            <p>Instructions invoquées à l'intérieur d'une fonction</p>
+          </section>
+          <section>
             <pre>
-              <code>
-                %w(Bulbizarre Salamèche Carapuce).each do |pokemon|
-                  puts "Voulez-vous combattre Régis avec #{pokemon} ?"
-                end
-              </code>
               <code>
                 array = [1, 2, 3, 4]
 
@@ -358,9 +373,14 @@
                   n ** 2
                 end
 
-                puts array.inspect
-
+                array
                 # => [1, 4, 9, 16]
+              </code>
+            </pre>
+            <pre>
+              <code>
+                [1,3,5,7,11,13].inject { |a,b| a+b }
+                # => 40
               </code>
             </pre>
           </section>
@@ -368,48 +388,54 @@
 
 
         <section>
-          <h2>Les petits plus</h2>
-          <pre>
-            <code>
-              > is_allowed?
-              #=> true
-            </code>
-            <code>
-              > (1..9).to_a
-              #=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
-              > [1...10].to_a
-              #=> [1, 2, 3, 4, 5, 6, 7, 8, 9]
-            </code>
-            <code>
-              > 5.times {print "lol "}
-              #=> lol lol lol lol lol
-            </code>
-          </pre>
+          <section>
+            <h1>Les petits plus</h1>
+          </section>
+          <section>
+            <h2>Ranges</h2>
+            <pre>
+              <code>
+                (0..5).to_a  # => [0, 1, 2, 3, 4, 5]
+                (0...5).to_a # => [0, 1, 2, 3, 4]
+              </code>
+            </pre>
+            <pre>
+              <code>
+                year = 1972
+                born_in_the = case year
+                                when 1970..1979: 'Seventies'
+                                when 1980..1989: 'Eighties'
+                                when 1990..1999: 'Nineties'
+                              end
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Paramètres de méthodes</h2>
+            <pre>
+              <code>
+                def some_method(a, b, c=5, *p, q)
+                end
+
+                some_method(25, 35, 45)
+                  # a=25   b=35  c=5
+                  # p=[]   q=45
+                some_method(25, 35, 45, 55)
+                  # a=25   b=35  c=45
+                  # p=[]   q=55
+                some_method(25, 35, 45, 55, 65)
+                  # a=25   b=35  c=45
+                  # p=[55] q=65
+                some_method(25, 35, 45, 55, 65, 75)
+                  # a=25,  b=35  c=45
+                  # p=[55, 65]   q=75
+              </code>
+            </pre>
+          </section>
         </section>
 
-        <section>
-          <h2>Un petit dernier pour la route</h2>
-          <pre>
-            <code>
-              def some_method(a, b, c=5, *p, q)
-              end
 
-              some_method(25, 35, 45)
-                a=25   b=35  c=5
-                p=[]   q=45
-              some_method(25, 35, 45, 55)
-                a=25   b=35  c=45
-                p=[]   q=55
-              some_method(25, 35, 45, 55, 65)
-                a=25   b=35  c=45
-                p=[55] q=65
-              some_method(25, 35, 45, 55, 65, 75)
-                a=25,  b=35  c=45
-                p=[55, 65]    q=75
-            </code>
-          </pre>
-        </section>
-
+        <!-- Utilisation -->
         <section>
           <h1>Quelle utilisation<br>aujourd'hui ?</h1>
         </section>
@@ -490,6 +516,20 @@
 
         <section>
           <h1>Conclusion</h1>
+          <br>
+          <ul>
+            <li>Langage très agréable</li>
+            <li>Performance sans cesse améliorée</li>
+            <li>Excellente communauté</li>
+            <li>En perte de vitesse face à NodeJS</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Ruby is not dead yet.</h1>
+          <p>
+            <img src="img/ali.gif" height="300">
+          </p>
         </section>
 
         <section>
